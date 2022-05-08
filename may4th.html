@@ -55,71 +55,38 @@
             <li>“The art of debugging is figuring out what you really told your program to do rather than what you thought you told it to do.”” — Andrew Singer</li>
             <li><a href="https://www.theodinproject.com/lessons/foundations-installing-node-js"</a>installing node</a></li>
             </ul>       
-            
-            <div class="codepens">
-                <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="JjJXZVz" data-user="TheOdinProjectExamples" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-                    <span>See the Pen <a href="https://codepen.io/TheOdinProjectExamples/pen/JjJXZVz">
-                    flex-shrink example</a> by TheOdinProject (<a href="https://codepen.io/TheOdinProjectExamples">@TheOdinProjectExamples</a>)
-                    on <a href="https://codepen.io">CodePen</a>.</span>
-                </p>
-                <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
-                <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="MWQwpzo" data-user="dylanking" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-                    <span>See the Pen <a href="https://codepen.io/dylanking/pen/MWQwpzo">
-                    flex-direction example</a> by dylan (<a href="https://codepen.io/dylanking">@dylanking</a>)
-                    on <a href="https://codepen.io">CodePen</a>.</span>
-                </p>
-                <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
-                <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="MWoyBzR" data-editable="true" data-user="TheOdinProjectExamples" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-                    <span>See the Pen <a href="https://codepen.io/TheOdinProjectExamples/pen/MWoyBzR">
-                    flex-alignment example</a> by TheOdinProject (<a href="https://codepen.io/TheOdinProjectExamples">@TheOdinProjectExamples</a>)
-                    on <a href="https://codepen.io">CodePen</a>.</span>
-                </p>
-                <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
-                <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
-                <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="qBjZyea" data-editable="true" data-user="TheOdinProjectExamples" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-                    <span>See the Pen <a href="https://codepen.io/TheOdinProjectExamples/pen/qBjZyea">
-                    flex-alignment example 2</a> by TheOdinProject (<a href="https://codepen.io/TheOdinProjectExamples">@TheOdinProjectExamples</a>)
-                    on <a href="https://codepen.io">CodePen</a>.</span>
-                </p>
-                <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
-                <a href="https://www.theodinproject.com/lessons/foundations-css-foundations">just refer to this for some css tricks that apparently I either don't remember from freecodecame or weren't covered</a>
-
-
-            </div>
-        </div>
-        
-        <div class="day">
-            <time datetime="2022-05-06 11:36">may 6th 2022</time>
-            <p>From failing the 3rd odin exercise, where I had to remove any amount of elements requested from an array, I learned some things. I had a solution which worked logically but I didn't know how to actually write it so I had to look up the solution, which I'm studying now. <br><br>
-            
-            The first thing I didn't know was to use the spread operator to essentially "loop" through all the arguments which were passed into the function. In my original solution I literally wrote a loop to go through them all but this is much more graceful. <br><br>
-
-            The other thing I wouldn't have known to do was to do a forEach loop. I would have done it diffrently like the classic (let x = 0; etc) way or in mine i did for (x in arguments) but this makes sense too. I just searched online and apparently it's just the better way to loop, which makes sense. <br><br>
-
-            The last thing is the !args.includes(item) bit. I didn't know that was a thing. feels ridiculously easy when it's put like this. I was thinking too low level and it seems the abstracted answer is the best way to go.
+            <a href="https://www.theodinproject.com/lessons/foundations-css-foundations">just refer to this for some css tricks that apparently I either don't remember from freecodecame or weren't covered</a>
+            <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="JjJXZVz" data-user="TheOdinProjectExamples" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                <span>See the Pen <a href="https://codepen.io/TheOdinProjectExamples/pen/JjJXZVz">
+                flex-shrink example</a> by TheOdinProject (<a href="https://codepen.io/TheOdinProjectExamples">@TheOdinProjectExamples</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
             </p>
-            <code>
-                const removeFromArray = function (...args) {
-        
-                    const array = args[0];
-                    const newArray = [];
-                
-                    array.forEach((item) => {
-                      if (!args.includes(item)) {
-                        newArray.push(item);
-                      }
-                    });
-                    return newArray;
-                  };
-                </code>
-            <ul>
-                <li><strong>...spread</strong> operator return all "items" back as individual pieces of data - spreading a string into a new array will give you an array of a bunch of single chars of that string. This is useful when the amount of something isn't known so we're saying "all" instead of manually looping through.</li>
-                <li><strong>forEach</strong> is a useful and high level way to loop through an iterable</li>
-                <li><strong>!args.includes(item)</strong> uses the .includes(item) on (args) to check for item in the iterable. it uses the ! prefix to say if it isn't in args, which is cool. </li>
-                
-            </ul>
+            <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+            <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="MWQwpzo" data-user="dylanking" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                <span>See the Pen <a href="https://codepen.io/dylanking/pen/MWQwpzo">
+                flex-direction example</a> by dylan (<a href="https://codepen.io/dylanking">@dylanking</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+            <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="MWoyBzR" data-editable="true" data-user="TheOdinProjectExamples" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                <span>See the Pen <a href="https://codepen.io/TheOdinProjectExamples/pen/MWoyBzR">
+                flex-alignment example</a> by TheOdinProject (<a href="https://codepen.io/TheOdinProjectExamples">@TheOdinProjectExamples</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+            <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+            <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="qBjZyea" data-editable="true" data-user="TheOdinProjectExamples" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                <span>See the Pen <a href="https://codepen.io/TheOdinProjectExamples/pen/qBjZyea">
+                flex-alignment example 2</a> by TheOdinProject (<a href="https://codepen.io/TheOdinProjectExamples">@TheOdinProjectExamples</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+            
             
         </div>
+        
+        
+        
 	<script src="index.js"></script>
   </body>
 </html>

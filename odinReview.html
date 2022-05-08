@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <ul>
+            <li><strong>...spread</strong> operator return all "items" back as individual pieces of data - spreading a string into a new array will give you an array of a bunch of single chars of that string. This is useful when the amount of something isn't known so we're saying "all" instead of manually looping through.</li>
+            <li><strong>forEach</strong> is a useful and high level way to loop through an iterable</li>
+            <li><strong>!args.includes(item)</strong> uses the .includes(item) on (args) to check for item in the iterable. it uses the ! prefix to say if it isn't in args, which is cool. </li>
+            <li><strong>typeof num1 !== "number"</strong> let me check if the argument being passed was the right variable type</li>
+            <li><strong>checking contradicting conditions</strong> return year % 4 === 0 && ( year % 100 !== 0 || year % 400 === 0)</li>
+            <li><strong>WHY DOES THIS NEED THE * 10 AND /10 ???</strong> return Math.round((f - 32) * (5/9) * 10) / 10</li>
+            <li><strong>const div = document.createElement('div');</strong> creates element in memory</li>
+            <li><strong>.cloneNode(true)</strong> allows you to clone an element in the dom via js</li>
+            <li><strong>parentNode.removeChild(child)</strong> removes child from parentNode on the DOM and returns a reference to child</li>
+            <li><strong>parentNode.appendChild(childNode)</strong> appends childNode as the last child of parentNode</li>
+            <li><strong>parentNode.insertBefore(newNode, referenceNode)</strong> inserts newNode into parentNode before referenceNode</li>
+            <li><strong>const div = document.createElement('div');</strong> creates an element (in memory)</li>
+            <li><strong>div.setAttribute('style', 'color: blue; background: white;');</strong> sets css style attribute for an element</li>
+            <li><strong></strong></li>
+            <li><strong></strong></li>
+            <li><strong></strong></li>
+            <li><strong></strong></li>
+            <li><strong></strong></li>
+        </ul>
+        <div id="odinLearn">
+            <ul id="myList">
+                <li>this is item 1</li>
+                <li id="poo">this item has an id of poo</li>
+                <li id="removeMe">YESSSSSS</li>
+
+            </ul>
+        </div>  
+        <script>
+
+
+            const odinDiv = document.getElementById("myList");
+            
+
+            const redText = document.createElement('p')
+            redText.textContent = "Hey I'm red!"
+            myList.appendChild(redText);
+            odinLearn.appendChild(redText.cloneNode(true)); // allows an element to be reused because of .cloneNode(true)
+
+            myList.removeChild(removeMe);
+            
+            /*
+            let newListItem = document.createElement("li");
+            newListItem.textContent = "fart";
+            myList.appendChild(newListItem);
+            newListItem.setAttribute('style', 'background-color: green');       
+            */
+
+        </script>
+        <!-- <script src="index.js" async defer></script> -->
+    </body>
+</html>
+
+<!--
+    a <p> with red text that says “Hey I’m red!”
+an <h3> with blue text that says “I’m a blue h3!”
+a <div> with a black border and pink background color with the following elements inside of it:
+another <h1> that says “I’m in a div”
+a <p> that says “ME TOO!”
+Hint for this one: after creating the <div> with createElement, append the <h1> and <p> to it before adding it to the container.
+-->
