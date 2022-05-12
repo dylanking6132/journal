@@ -27,9 +27,69 @@
             <li><strong>parentNode.insertBefore(newNode, referenceNode)</strong> inserts newNode into parentNode before referenceNode</li>
             <li><strong>const div = document.createElement('div');</strong> creates an element (in memory)</li>
             <li><strong>div.setAttribute('style', 'color: blue; background: white;');</strong> sets css style attribute for an element</li>
-            <li><strong></strong></li>
-            <li><strong></strong></li>
-            <li><strong></strong></li>
+
+            
+
+            
+
+            <li><strong>.join()</strong>:: creates and returns a new string by concatenating all of the elements in an array (or an array-like object), separated by commas or a specified separator string</li>
+
+
+            <h1>String Prototype Methods</h1>
+
+                <li><strong>parseInt</strong>:: function parses a string argument and returns an integer of the specified radix (the base in mathematical numeral systems)</li>
+
+                <li><strong>.toLowerCase()</strong> :: method returns the calling string value converted to lower case</li>
+
+                <li><strong>.toUpperCase</strong> :: method returns the calling string value converted to uppercase</li>
+
+                <li><strong>.split()</strong> :: method divides a String into an ordered list of substrings, puts these substrings into an array, and returns the array. The division is done by searching for a pattern; where the pattern is provided as the first parameter in the method's call</li>
+
+            <h1>Adding / Removing Elements</h1>
+
+                <li><strong>Array.prototype.join()</strong>:: creates and returns a new string by concatenating all of the elements in an array (or an array-like object), separated by commas or a specified separator string</li>
+
+                <li><strong>Array.prototype.push()</strong> :: method adds one or more elements to the end of an array and returns the new array's length.</li>
+
+                <li><strong>Array.prototype.pop()</strong> :: method removes the last element from an array and returns the removed element</li>
+
+                <li><strong>Array.prototype.shift()</strong> :: method removes the first element from an array and returns that element</li>
+
+                <li><strong>Array.prototype.unshift()</strong> :: method adds one or more elements to the beginning of an array and returns the new array's length</li>
+            
+            <h1>Finding Elements</h1>
+
+                <li><strong>.charAt</strong> :: method returns a new string consisting of the single UTF-16 code unit located at the specified offset into the string.</li>
+
+                <li><strong>Array.splice(index, amountOfItemsToDelete)</strong> :: method that allows you to insert new elements into the middle of an array. However, you can use this method to delete and replace existing elements as well. Changes the original array. .splice(1, 2) would remove the 2nd and 3rd element of an array. if we did .splice(1, 2, "item to add") it would still remove those items and add the string too. Array.splice(position,0,new_element_1,new_element_2,...)</li>
+                
+                <li><strong>String.prototype.slice(start, end)</strong> :: method extracts a portion of a string and returns it as a substring. Doesn't change the original array</li>
+
+                <li><strong>Array.indexOf(searchElement, fromIndex)</strong> :: method returns the index of the first occurrence the element that you want to find, or -1 if the element is not found. can also to lastIndexOf</li>
+
+                <li><strong>find(callback(element[, index[, array]])[, thisArg])</strong> :: method returns the first element in an array that satisfies a provided function. (ex: ([1, 2, 3, 4, 5].find(e => e - 2 == 3) == 5)</li>
+
+                <li><strong>findIndex(testFn(element[, index[, array]])[, thisArg])</strong> :: method returns the index of the element that satisfies a testing function or -1 if no element passed the test. Similar to .find(), but returns the index instead of the element</li>
+
+                <li><strong>Array.prototype.includes(element,fromIndex)</strong> :: method returns true if an array contains a given element</li>
+
+            <h1>High-Order Methods</h1>
+
+                <li><strong>.sort()</strong> :: sorts the elements of an array in place and returns the sorted array. The default sort order is ascending, built upon converting the elements into strings, then comparing their sequences of UTF-16 code units values. </li>
+
+                <li><strong>array.reduce()</strong> executes a user-supplied "reducer" callback function on each element of the array, in order, passing in the return value from the calculation on the preceding element. The final result of running the reducer across all elements of the array is a single value. For example : .reduce((x, y) => x + y) will add all of the elements of the array together by taking the first index as x, then adding the rest in sequence to it. Going to take some practise. another way to see it: .reduce((accumulator, value) => accumulator + value)</li>
+
+                <li><strong>.map()</strong> :: method creates a new array populated with the results of calling a provided function on every element in the calling array. [1, 2, 3, 4, 5].map(x => x *2) --> returns --> [2, 4, 6, 8, 10]</li>
+
+                <li><strong>Array.prototype.filter()</strong> :: method includes the only elements in the result array if they satisfy the test in the callback function</li>
+                
+                <li><strong></strong></li>
+
+                <li><strong></strong></li>
+
+                <li><strong></strong></li>
+
+
             <li><strong></strong></li>
             <li><strong></strong></li>
         </ul>
