@@ -91,6 +91,8 @@ String.prototype.toJadenCase = function () {
 
 /* <------> ARRAY METHODS <------> */
 
+.from()
+
 // .splice(start, deleteCount, item1, item2, itemN) mutates away items from an array and returns them
 let testArray = [1, 2, 3, 4, 5]; /* --> */ testArray.splice(1, 2, "EXTRA"); // --> returns --> [2, 3] --> also mutates into [ 1, 'EXTRA', 4, 5 ]
 
@@ -154,18 +156,106 @@ let onlyLowerCaseAlphabet = ("Dylan King SAYS: HELLO World!").replace(/[^a-z]/g,
 
 /* <------> Document Object Model Manipulation <------> */
 
-// NOTABLE CONCEPTS
+// ::: NOTABLE CONCEPTS :::
 // Event Listeners
+// Event Loop - web workers
+// Timers
+// Debouncing 
+// All node objects (e.g Element, Attr, Text etc...) inherit properties and methods from a primary Node object. These properties and methods are the baseline values and functions for manipulating, inspecting, and traversing the DOM
+// Every node has a nodeType and nodeName property that is inherited from Node -- EX: Text nodes have a nodeType code of 3 and nodeName value of '#text'
 
-// Working with the DOM is like working with regular objects
+// ::: NODE PROPERTIES :::
+/*
+childNodes
+firstChild
+lastChild
+nextSibling
+nodeName
+nodeType
+nodeValue
+parentNode
+previousSibling
+Node Methods:
+appendChild()
+cloneNode()
+compareDocumentPosition()
+contains()
+hasChildNodes()
+insertBefore()
+isEqualNode()
+removeChild()
+replaceChild()
+Document Methods:
+
+document.createElement()
+document.createTextNode()
+HTML * Element Properties:
+
+innerHTML
+outerHTML
+textContent
+innerText
+outerText
+firstElementChild
+lastElementChild
+nextElementChild
+previousElementChild
+children
+HTML element Methods:
+
+insertAdjacentHTML()
+
+*/
+
+// Working with the DOM is like working with regular objects. It has and inherits properties, values, and methods.
+
+createElement()
+createTextNode()
+
+// CREATE an element and store it into memory with a variable
+const createElementVar = document.createElement('div');
+
+// SET the inner HTML of an element
+parentElement.innerHTML = '<p>This is a paragraph which will placed within the parent element</p>';
+
+// INSERT an element into the DOM
+document.body.appendChild(elementToAppend);
+document.body.prepend(elementToAppend);
+
+// INSERTS a given element node at a given position relative to the element it is invoked upon
+Element.insertAdjacentElement(position, element)
+// 'beforebegin': Before the targetElement itself
+// 'afterbegin': Just inside the targetElement, before its first child.
+// 'beforeend': Just inside the targetElement, after its last child.
+// 'afterend': After the targetElement itself.
+
+// add event listener
+document.addEventListener(type, listener); // sketchbox.addEventListener('click', function);
+
+// .querySelector(selectors) returns a specific(or first) element specified by the selector
+let selectedElements = document.querySelector("selectors"); // stores a reference to the first element according to the selectors
+
+// .querySelectorAll(selectors)returns all elements specified by the selectors
+let selectedElementsAll = document.querySelectorAll("selectors"); // stores a reference to all elements according to the selector
+
+
+
+
+
+// sets a variable to all of the divs (just the ones created within this function, maybe? unsure) let squares = board.querySelectorAll("div");
+squares.forEach((div) => div.remove()); // removes all of the divs from the board so that if we change the size they are recreated properly
+
+
+// STYLE background
+document.body.style.backgroundColor = "blue";
 
 // get the first link on a page
 let firstLink = document.body.getElementsByTagName("a")[0];
 
-// get an element according to its ID
+// get an element according to its ID -- queryselector is better
 let getElementById = document.getElementById("element id goes here");
 
-// get an element according to its class
+// get an element according to its class -- queryselector is better
 let getElementsByClassName = document.getElementsByClassName("class name goes here");
 
 // style an element
